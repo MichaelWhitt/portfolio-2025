@@ -63,8 +63,6 @@ export const ArrowLeft = ({ className = '', width = 40, height = 40, fill = "non
     )
 }
 
-// X, Type, MousePointerClick, Contrast 
-
 export const X = ({ className = '', width = 40, height = 40, fill = "none", stroke = "#e158f3" }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -74,7 +72,7 @@ export const X = ({ className = '', width = 40, height = 40, fill = "none", stro
     )
 }
 
-export const TypeLine = ({ className = '', width = 40, height = 40, fill = "none", stroke = "#e158f3" }) => {
+export const TypeLine = ({ className = '', width = 40, height = 40, fill = "red", stroke = "#e158f3" }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
             <polyline points="4 7 4 4 20 4 20 7"/>
