@@ -1,23 +1,23 @@
 import { Route, Switch } from 'wouter'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import About from './components/About'
-import Contact from './components/Contact'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Layout } from './components/Layout/Layout'
+import Landing from './pages/Landing/Landing'
+import Experience from './pages/Experience/Experience'
+import Contact from './pages/Contact/Contact'
+
+const queryClient = new QueryClient()
 
 function App() {
   return (
-    <div className='h-screen w-screen flex flex-col overflow-hidden'>
-      <Header />
-      <main className='flex-grow overflow-auto'>
+    <QueryClientProvider client={queryClient}>
+      <Layout>
         <Switch>
-          <Route path='/' component={Home} />
-          <Route path='/about' component={About} />
+          <Route path='/' component={Landing} />
+          <Route path='/experience' component={Experience} />
           <Route path='/contact' component={Contact} />
         </Switch>
-      </main>
-      <Footer />
-    </div>
+      </Layout>
+    </QueryClientProvider>
   )
 }
 

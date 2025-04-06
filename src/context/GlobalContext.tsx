@@ -1,5 +1,4 @@
 import { createContext, useContext, ReactNode } from 'react'
-import { GlobalContextType } from '../types'
 
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined)
 
