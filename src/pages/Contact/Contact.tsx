@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
-import { LinkedIn, Email } from '../../components/icons/Icons'
+import { LinkedIn, Email, ArrowLeft } from '../../components/Icons/Icons'
 import { useThemeStore } from '../../store/useThemeStore'
+import Button from '../../components/Buttons/Button'
+import { Link } from 'wouter'
 
 const Contact = () =>  {
   const { reducedMotion } = useThemeStore()
@@ -14,12 +16,15 @@ const Contact = () =>  {
           transition={{ duration: reducedMotion ? 0 : 0.5 }}
         >
           <div className='flex items-center mb-8'>
-            <button 
-              onClick={() => window.history.back()}
-              className='bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-lg transition-colors'
-            >
-              Back to Home
-            </button>
+            <Link to='/'>
+              <Button 
+                className='bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-lg transition-colors'
+                icon={() => <ArrowLeft className='w-6 h-6 inline mr-2'/>}
+                iconLocation='left'
+              >
+                  Home
+              </Button>
+            </Link>
           </div>
 
           <h1 className='text-5xl font-bold mb-4'>

@@ -1,6 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Type, MousePointerClick, Contrast } from 'lucide-react'
+import { X, TypeLine, MousePointerClick, Contrast } from '../Icons/Icons'
 import { useThemeStore } from '../../store/useThemeStore'
+import { useEffect, useRef } from 'react'
+import Button from '../Buttons/Button'
 
 interface AccessibilityModalProps {
   isOpen: boolean
@@ -16,6 +18,26 @@ export function AccessibilityModal({ isOpen, onClose }: AccessibilityModalProps)
     setFontSize,
     toggleHighContrast,
   } = useThemeStore()
+
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Close modal on Esc key press
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+      closeButtonRef.current?.focus(); // Focus on the close button when modal opens
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
   return (
     <AnimatePresence>
@@ -41,71 +63,72 @@ export function AccessibilityModal({ isOpen, onClose }: AccessibilityModalProps)
               <h2 id='accessibility-title' className='text-2xl font-bold'>
                 Accessibility Settings
               </h2>
-              <button
+              <Button
+                ref={closeButtonRef}
                 onClick={onClose}
-                className='p-2 hover:bg-white/10 rounded-full transition-colors'
+                className='bg-white/5 hover:bg-white/10 p-2 rounded-full transition-colors '
                 aria-label='Close accessibility settings'
               >
-                <X className='w-5 h-5' />
-              </button>
+                <X className='w-8 h-8' />
+              </Button>
             </div>
 
             <div className='space-y-6'>
               <div>
                 <h3 className='text-lg font-semibold mb-3 flex items-center'>
-                  <Type className='w-5 h-5 mr-2' />
+                  <TypeLine className='w-8 h-8 mr-3' />
                   Font Size
                 </h3>
                 <div className='flex gap-3'>
                   {(['normal', 'large', 'x-large'] as const).map((size) => (
-                    <button
+                    <Button
                       key={size}
                       onClick={() => setFontSize(size)}
                       className={`px-4 py-2 rounded-lg transition-colors ${
                         fontSize === size
-                          ? 'bg-purple-500 text-white'
+                          ? 'bg-purple-500/60 text-white'
                           : 'bg-white/5 hover:bg-white/10'
                       }`}
                     >
                       {size.charAt(0).toUpperCase() + size.slice(1)}
-                    </button>
+                    </Button>
                   ))}
                 </div>
               </div>
 
               <div>
                 <h3 className='text-lg font-semibold mb-3 flex items-center'>
-                  <MousePointerClick className='w-5 h-5 mr-2' />
+                  <MousePointerClick className='w-8 h-8 mr-3' />
                   Motion
                 </h3>
-                <button
+                <Button
                   onClick={toggleReducedMotion}
                   className={`w-full px-4 py-2 rounded-lg transition-colors ${
                     reducedMotion
-                      ? 'bg-purple-500 text-white'
+                      ? 'bg-purple-500/60 text-white'
                       : 'bg-white/5 hover:bg-white/10'
                   }`}
                 >
                   {reducedMotion ? 'Reduced Motion On' : 'Reduced Motion Off'}
-                </button>
+                </Button>
               </div>
 
-              <div>
+              {/* <div>
                 <h3 className='text-lg font-semibold mb-3 flex items-center'>
-                  <Contrast className='w-5 h-5 mr-2' />
+                  <Contrast className='w-8 h-8 mr-3'  />
                   Contrast
                 </h3>
-                <button
+                <Button
                   onClick={toggleHighContrast}
                   className={`w-full px-4 py-2 rounded-lg transition-colors ${
                     highContrast
-                      ? 'bg-purple-500 text-white'
+                      ? 'bg-purple-500/60 text-white'
                       : 'bg-white/5 hover:bg-white/10'
                   }`}
                 >
                   {highContrast ? 'High Contrast On' : 'High Contrast Off'}
-                </button>
-              </div>
+                </Button>
+              </div> */}
             </div>
           </motion.div>
         </>

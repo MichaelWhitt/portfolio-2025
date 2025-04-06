@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
-import { Code, Accessibility, Sparkles } from '../../components/icons/Icons'
+import { Code, Accessibility, Sparkles, ArrowLeft } from '../../components/Icons/Icons'
 import { useThemeStore } from '../../store/useThemeStore'
+import { Link } from 'wouter'
+import Button from '../../components/Buttons/Button'
 
 const Landing = () => {
   const { reducedMotion } = useThemeStore()
@@ -60,6 +62,18 @@ const Landing = () => {
             </motion.div>
           </div>
         </motion.div>
+        <div className='flex justify-center mt-5'>
+          <Link to='/experience'>
+              <Button 
+                className='bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-lg transition-colors'
+                icon={() => <ArrowLeft className='w-6 h-6 inline ml-2 rotate-180'/>}
+                iconLocation='right'
+              >
+                  Experience
+              </Button>
+            </Link>
+        </div>
+        
       </div>
     </div>
   )

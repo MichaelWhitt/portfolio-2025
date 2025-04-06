@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
-import { Code, ArrowLeft } from '../../components/icons/Icons'
+import { Code, ArrowLeft } from '../../components/Icons/Icons'
 import { useThemeStore } from '../../store/useThemeStore'
+import { Link } from 'wouter'
+import Button from '../../components/Buttons/Button'
 
 const Experience = () => {
   
@@ -57,13 +59,15 @@ const { reducedMotion } = useThemeStore()
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: reducedMotion ? 0 : 0.5 }}
         >
-          <button 
-            onClick={() => window.history.back()}
-            className='flex cursor-pointer items-center space-x-2 bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-lg transition-colors mb-8'
-          >
-            <ArrowLeft className='w-4 h-4' />
-            <span>Back</span>
-          </button>
+          <Link to='/'>
+            <Button 
+              className='bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-lg transition-colors'
+              icon={() => <ArrowLeft className='w-6 h-6 inline mr-2'/>}
+              iconLocation='left'
+            >
+                Home
+            </Button>
+          </Link>
 
           <h1 className='text-5xl font-bold mb-4'>
             Professional <span className='text-purple-500'>Journey</span>

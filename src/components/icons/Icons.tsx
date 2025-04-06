@@ -62,3 +62,45 @@ export const ArrowLeft = ({ className = '', width = 40, height = 40, fill = "non
         </svg>
     )
 }
+
+// X, Type, MousePointerClick, Contrast 
+
+export const X = ({ className = '', width = 40, height = 40, fill = "none", stroke = "#e158f3" }) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M18 6 6 18"/>
+            <path d="m6 6 12 12"/>
+        </svg>
+    )
+}
+
+export const TypeLine = ({ className = '', width = 40, height = 40, fill = "none", stroke = "#e158f3" }) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <polyline points="4 7 4 4 20 4 20 7"/>
+            <line x1="9" x2="15" y1="20" y2="20"/>
+            <line x1="12" x2="12" y1="4" y2="20"/>
+        </svg>
+    )
+}
+
+export const MousePointerClick = ({ className = '', width = 40, height = 40, fill = "none", stroke = "#e158f3" }) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <path d="M14 4.1 12 6"/>
+            <path d="m5.1 8-2.9-.8"/>
+            <path d="m6 12-1.9 2"/>
+            <path d="M7.2 2.2 8 5.1"/>
+            <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/>
+        </svg>
+    )
+}
+
+export const Contrast = ({ className = '', width = 40, height = 40, fill = "none", stroke = "#e158f3" }) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 18a6 6 0 0 0 0-12v12z"/>
+        </svg>
+    )
+}
