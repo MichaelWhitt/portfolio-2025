@@ -1,4 +1,4 @@
-# Project Scaffold Template
+# Project Scaffold Template 2025
 
 ## Uses:
 - React 19
