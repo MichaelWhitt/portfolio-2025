@@ -32,7 +32,7 @@ const Landing = () => {
               whileHover={{ scale: reducedMotion ? 1 : 1.05 }}
               className='bg-white/5 p-6 rounded-xl backdrop-blur-sm'
             >
-              <div className='bg-purple-500/20 p-3 rounded-full w-fit mx-auto mb-4'>
+              <div className='bg-white p-3 rounded-full w-fit mx-auto mb-4'>
                 <Code className='' />
               </div>
               <h3 className='text-xl font-semibold mb-2'>Software Engineering</h3>
@@ -43,7 +43,7 @@ const Landing = () => {
               whileHover={{ scale: reducedMotion ? 1 : 1.05 }}
               className='bg-white/5 p-6 rounded-xl backdrop-blur-sm'
             >
-              <div className='bg-purple-500/20 p-3 rounded-full w-fit mx-auto mb-4'>
+              <div className='bg-white p-3 rounded-full w-fit mx-auto mb-4'>
                 <Accessibility className='' />
               </div>
               <h3 className='text-xl font-semibold mb-2'>Accessibility Consulting</h3>
@@ -54,7 +54,7 @@ const Landing = () => {
               whileHover={{ scale: reducedMotion ? 1 : 1.05 }}
               className='bg-white/5 p-6 rounded-xl backdrop-blur-sm'
             >
-              <div className='bg-purple-500/20 p-3 rounded-full w-fit mx-auto mb-4'>
+              <div className='bg-white p-3 rounded-full w-fit mx-auto mb-4'>
                 <Sparkles className='' />
               </div>
               <h3 className='text-xl font-semibold mb-2'>User Experience</h3>
