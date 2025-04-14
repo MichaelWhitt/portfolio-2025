@@ -15,6 +15,7 @@ function App() {
           <Route path='/' component={Landing} />
           <Route path='/experience' component={Experience} />
           <Route path='/contact' component={Contact} />
+          <Route path='*' component={Landing} />
         </Switch>
       </Layout>
     </QueryClientProvider>

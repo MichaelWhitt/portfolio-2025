@@ -22,6 +22,7 @@ declare global {
     period: string;
     description: string;
     skills: string[];
+    icon: React.JSXElement
   }
 
   interface Skill {

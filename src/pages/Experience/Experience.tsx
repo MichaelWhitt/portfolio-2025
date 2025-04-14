@@ -1,55 +1,14 @@
 import { motion } from 'framer-motion'
-import { Code, ArrowLeft } from '../../components/Icons/Icons'
+import { ArrowLeft } from '../../components/Icons/Icons'
 import { useThemeStore } from '../../store/useThemeStore'
 import { Link } from 'wouter'
 import Button from '../../components/Buttons/Button'
+import { experiences as workExperience } from '../../data/experiences'
+import { projects } from '../../data/projects'
 
 const Experience = () => {
   
 const { reducedMotion } = useThemeStore()
-
-  const workExperience = [
-    {
-      title: 'Senior Frontend Developer',
-      company: 'Tech Innovations Inc.',
-      period: '2021 - Present',
-      description: 'Led frontend development for accessibility-focused web applications. Implemented WCAG guidelines and optimized performance.',
-      skills: ['React', 'TypeScript', 'A11y'],
-      icon: Code,
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Digital Solutions Co.',
-      period: '2019 - 2021',
-      description: 'Developed responsive web applications and collaborated with UX team on design implementation.',
-      skills: ['React', 'JavaScript', 'CSS'],
-      icon: Code,
-    }
-  ]
-
-  const projects = [
-    {
-      title: 'E-commerce Accessibility Platform',
-      description: 'Built a fully accessible e-commerce platform with screen reader support and keyboard navigation.',
-      link: 'https://example.com',
-      skills: ['React', 'TypeScript', 'ARIA', 'Redux'],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      title: 'Healthcare Dashboard',
-      description: 'Developed a real-time analytics dashboard for healthcare providers with data visualization.',
-      link: 'https://example.com',
-      skills: ['React', 'D3.js', 'WebSocket', 'Material-UI'],
-      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      title: 'AI-Powered Learning Platform',
-      description: 'Created an adaptive learning platform with AI-driven content recommendations.',
-      link: 'https://example.com',
-      skills: ['React', 'Python', 'TensorFlow.js', 'GraphQL'],
-      image: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=800&q=80'
-    }
-  ]
 
   return (
     <div className='container mx-auto px-4 py-16'>
