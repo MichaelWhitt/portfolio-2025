@@ -27,7 +27,7 @@ const Header = ({ onAccessibilityClick }: HeaderProps) => {
         <nav className='container mx-auto px-4 py-4 flex items-center justify-between'>
           <Link href='/' className='flex items-center space-x-2 text-xl font-bold text-white hover:text-purple-500 transition-colors'>
             <Code2 className='w-6 h-6' />
-            <span>Dev Portfolio</span>
+            <span>Michael D Whitt</span>
           </Link>
           
           {/* Desktop Navigation */}

@@ -61,8 +61,7 @@ const Landing = () => {
               <p className='text-gray-400'>Creating intuitive and delightful user experiences</p>
             </motion.div>
           </div>
-        </motion.div>
-        <div className='flex justify-center mt-5'>
+          <div className='flex justify-center mt-5'>
           <Link to='/experience'>
               <Button 
                 className='bg-white/5 hover:bg-white/10 text-white px-4 py-2 rounded-lg transition-colors'
@@ -72,8 +71,8 @@ const Landing = () => {
                   Experience
               </Button>
             </Link>
-        </div>
-        
+          </div>
+        </motion.div>
       </div>
     </div>
   )
