@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     },
     {
       title: 'Frontend Developer',
-      company: 'Astraphos',
+      company: 'Astraphos Limited',
       period: '2019 - 2021',
       description: 'Developed various applications for international SMEs',
       skills: ['React', 'TypeScript', 'Wordpress', 'PHP', 'CSS'],
