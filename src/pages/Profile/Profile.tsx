@@ -1,8 +1,11 @@
 import { Globe, LinkedIn, Github, Building, CircleCheck, Email, Keyboard } from '../../components/Icons/Icons'
-import iaaplogo from '../../../public/iaaplogo.webp'
-import dhslogo from '../../../public/dhslogo.png'
+import iaaplogo from '/iaaplogo.webp'
+import dhslogo from '/dhslogo.png'
 
-function BusinessCard() {
+
+//loaded from digital-business-card QR
+
+function Profile() {
   const services = [
     {
       title: 'Accessibility Audits',
@@ -168,4 +171,4 @@ function BusinessCard() {
   )
 }
 
-export default BusinessCard
+export default Profile
