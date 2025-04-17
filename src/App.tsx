@@ -1,4 +1,4 @@
-import { Route, Switch } from 'wouter'
+import { Redirect, Route, Switch } from 'wouter'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Layout } from './components/Layout/Layout'
 import Landing from './pages/Landing/Landing'
@@ -16,7 +16,11 @@ function App() {
           <Route path='/' component={Landing} />
           <Route path='/experience' component={Experience} />
           <Route path='/contact' component={Contact} />
-          <Route path='/digital-business-card' component={BusinessCard} />
+          <Route path='/digital-business-card'>
+              {/* @ts-expect-error/component isnt part of wouter ts */}
+              <Redirect to='/profile' component={BusinessCard}/>
+          </Route>
+          {/* <Route path='/digital-business-card' component={BusinessCard} /> */}
           <Route path='*' component={Landing} />
         </Switch>
       </Layout>
