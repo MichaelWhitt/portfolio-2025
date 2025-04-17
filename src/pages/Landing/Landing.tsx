@@ -33,7 +33,7 @@ const Landing = () => {
               className='bg-white/5 p-6 rounded-xl backdrop-blur-sm'
             >
               <div className='bg-white p-3 rounded-full w-fit mx-auto mb-4'>
-                <Code className='' />
+                <Code className='w-7 h-7' />
               </div>
               <h3 className='text-xl font-semibold mb-2'>Software Engineering</h3>
               <p className='text-gray-400'>Building robust, scalable applications with modern technologies</p>
@@ -44,7 +44,7 @@ const Landing = () => {
               className='bg-white/5 p-6 rounded-xl backdrop-blur-sm'
             >
               <div className='bg-white p-3 rounded-full w-fit mx-auto mb-4'>
-                <Accessibility className='' />
+                <Accessibility className='w-7 h-7' />
               </div>
               <h3 className='text-xl font-semibold mb-2'>Accessibility Consulting</h3>
               <p className='text-gray-400'>Ensuring digital products are accessible to all users</p>
@@ -55,7 +55,7 @@ const Landing = () => {
               className='bg-white/5 p-6 rounded-xl backdrop-blur-sm'
             >
               <div className='bg-white p-3 rounded-full w-fit mx-auto mb-4'>
-                <Sparkles className='' />
+                <Sparkles className='w-7 h-7' />
               </div>
               <h3 className='text-xl font-semibold mb-2'>User Experience</h3>
               <p className='text-gray-400'>Creating intuitive and delightful user experiences</p>

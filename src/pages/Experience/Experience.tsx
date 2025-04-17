@@ -48,7 +48,7 @@ const { reducedMotion } = useThemeStore()
                 transition={{ delay: reducedMotion ? 0 : index * 0.2 }}
                 className='relative pl-20 pb-12'
               >
-                <div className='absolute left-0 w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center'>
+                <div className='absolute left-0 w-16 h-16 bg-white/10 rounded-full flex items-center justify-center'>
                   <job.icon className='w-8 h-8 text-purple-500' />
                 </div>
                 <div className='bg-white/5 p-6 rounded-xl'>
